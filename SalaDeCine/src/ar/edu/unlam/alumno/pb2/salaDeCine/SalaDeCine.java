@@ -8,6 +8,7 @@ public class SalaDeCine {
 	private Butaca[][] butaca;
 	private int butacasDisponibles, butacasOcupadas;
 	private int fila, columna;
+	private String nombreSala;
 
 	/***
 	 * El constructor SalaDeCine genera las butacas según el número de filas y
@@ -19,10 +20,11 @@ public class SalaDeCine {
 	 * @param Pelicula peliculaEnCartelera
 	 * @param double   horarioPelicula
 	 */
-	public SalaDeCine(int cantFilas, int cantColumnas, Pelicula peliculaEnCartelera) {
+	public SalaDeCine(int cantFilas, int cantColumnas, Pelicula peliculaEnCartelera, String nombreSala) {
 		this.cantFilas = cantFilas;
 		this.cantColumnas = cantColumnas;
 		this.peliculaEnCartelera = peliculaEnCartelera;
+		this.nombreSala = nombreSala;
 		this.butaca = new Butaca[cantFilas][cantColumnas];
 		this.butacasDisponibles = getCapacidadSala();
 		for (int i = 0; i < this.cantFilas; i++) {
@@ -77,6 +79,10 @@ public class SalaDeCine {
 				}
 			}
 		}
+	}
+
+	public String getNombreSala() {
+		return this.nombreSala;
 	}
 
 	public void setFilaAsiento(int fila) {

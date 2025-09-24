@@ -53,12 +53,14 @@ public class Butaca {
 
 	}
 
+
 	@Override
 	public String toString() {
-		return "Butaca [disponible= " + this.disponible + ", espectador= " + espectador.getNombreCliente() + "]";
+		if (espectador == null) {
+			this.disponible = true;
+			return "Butaca disponible= " + this.disponible;
+		} else
+			return "Butaca disponible= " + this.disponible + ", espectador= " + espectador.getNombreCliente();
 	}
-	
-	
-	
 
 }

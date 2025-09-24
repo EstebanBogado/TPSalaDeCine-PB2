@@ -5,10 +5,10 @@ import java.time.LocalTime;
 public class ProgPpal {
 
 	private SalaDeCine sala;
-	private Pelicula pelicula;
 	private LocalTime horarioFuncion; // LocalTime.of(14, 30);
 	private LocalTime horaPrimeraFuncion, horaUltimaFuncion;
 	private int cantFunciones;
+	
 
 	public ProgPpal(SalaDeCine sala, int cantFunciones, LocalTime horarioFuncion, LocalTime horaPrimeraFuncion,
 			LocalTime horaUltimaFuncion) {
@@ -21,10 +21,6 @@ public class ProgPpal {
 
 	public Pelicula getPelicula() {
 		return sala.getPeliculaEnCartelera();
-	}
-
-	public void setPelicula(Pelicula pelicula) {
-		this.pelicula = pelicula;
 	}
 
 	public LocalTime getHoraPrimeraFuncion() {

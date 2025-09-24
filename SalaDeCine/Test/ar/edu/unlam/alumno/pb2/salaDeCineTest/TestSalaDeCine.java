@@ -14,7 +14,7 @@ public class TestSalaDeCine {
 	int cantFilas = 3;
 	int cantColumnas = 5;
 	Pelicula peliculaEnCartelera = new Pelicula("Duro de Matar", "Acción", 91, 13);
-	SalaDeCine nuevaSalaCine = new SalaDeCine(cantFilas, cantColumnas, peliculaEnCartelera);
+	SalaDeCine nuevaSalaCine = new SalaDeCine(cantFilas, cantColumnas, peliculaEnCartelera, "Sala 1");
 	Espectador pepe = new Espectador("pepe", "gómez", 18);
 	Espectador juan = new Espectador("juan", "pérez", 17);
 	Espectador maria = new Espectador("maría", "gonzález", 15);
